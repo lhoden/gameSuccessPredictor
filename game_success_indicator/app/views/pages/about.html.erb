@@ -1,0 +1,63 @@
+<html>
+<head>
+<link href="../../assets/stylesheets/genre_style.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <div class="toggle" onclick="toggle();"></div>
+  </header>
+  <div class="container">
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/VwVYrk7/sports.png" alt="icon created by goodware">
+        <p>Sports</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/BrrFKpk/rpg.png">
+        <p>RPG</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/cLZJ4L7/strategy.png">
+        <p>Strategy</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/48NtMzG/fighting.png">
+        <p>Fighting</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/tQ5Whk5/platformer.png">
+        <p>Platformer</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/JQXGwwF/fps.png">
+        <p>FPS</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="content">
+        <img src="https://i.ibb.co/tMbPG2K/racing.png">
+        <p>Racing</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function toggle() {
+      const toggle = document.querySelector('.toggle'); /* named variable same as method, might not be wise tbh */
+      const banner = document.querySelector('.banner');
+      toggle.classList.toggle('active')
+      banner.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>

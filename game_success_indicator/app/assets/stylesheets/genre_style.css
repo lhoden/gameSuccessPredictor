@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+  background: #222;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+.toggle {
+  position: relative;
+  width: 330px;
+  height: 30px;
+  background: url('https://i.ibb.co/q5YrbmC/menu.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url('https://i.ibb.co/HNyVJST/close.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+/* styling for the div containing all the boxes */
+.container {
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+  margin: 40px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+/* styling for each of the div boxes */
+.container .box {
+  background: #333;
+  padding: 20px;
+  display: grid;
+  font-size: 20px;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s; /* boxes will expand and change color on hover in 0.5s */
+  /* basically means all transitions/actions of the box will take on a 0.5s motion */
+}
+/* background color changes on hovering each box */
+.container .box:hover {
+  background: #6937d1;
+  color: #111;
+}
+.container .box img {
+  position: relative;
+  max-width: 100px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/* the first box will span two columns and one row of the grid */
+.container .box:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.container .box:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.container .box:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.container .box:nth-child(5) {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+  .container .box {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+}

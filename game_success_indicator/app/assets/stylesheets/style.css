@@ -1,0 +1,284 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@1,800&display=swap');
+*/
+
+body
+{
+font-family: 'Poppins', sans-serif;
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+
+.banner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#404040,#151415); /* gorgeous example of a gradient background here */
+}
+
+/* top+left colorful div flag */
+.banner:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 600px;
+  height: 280px;
+  background: #82bd61;
+  z-index: 1;
+  transition: 1s;
+}
+
+/* .banner.active is simply the area after the menu toggle has been clicked */
+/* what happens to the right+bottom flag after menu icon click */
+.banner.active:before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #151415;
+}
+
+/* right+bottom colorful div flag */
+.banner:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 300px;
+  width: 600px;
+  height: 200px;
+  background: #5c69a1;
+  z-index: 1;
+  transition: 1s;
+}
+
+/* what happens to the right+bottom flag after menu icon click */
+.banner.active:after {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #151415;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+
+header .logo {
+  font-size: 2em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700; /* black */
+  transition: 0.5s;
+  transform-origin: right;
+}
+
+/* what happens to the logo after menu toggle is clicked */
+.banner.active .logo {
+  transform: scale(0);
+  transform-origin: left; /* disappears to the left */
+}
+
+.toggle {
+  position: relative;
+  width: 330px;
+  height: 30px;
+  background: url('https://i.ibb.co/q5YrbmC/menu.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url('https://i.ibb.co/HNyVJST/close.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  transform-origin: right;
+  /* left: 50px; */
+}
+
+.banner.active .content {
+  transform: scale(0);
+  transform-origin: left; /* disappears to the left */
+}
+
+.content .contentBox {
+  max-width: 600px;
+}
+
+.content .contentBox h2 {
+  font-size: 4em;
+  line-height: 1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content .contentBox p {
+  font-size: 1em;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.content .contentBox a {
+  display: inline-block;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.content .contentBox a:hover {
+  letter-spacing: 4px;
+  background: #fff;
+  color: #111;
+}
+.content .imgBox img {
+  max-width: 100%;
+  min-width: 400px;
+}
+
+.sci {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: 0.5s;
+  transform-origin: right;
+  /* left: 150px; */
+}
+
+.banner.active .sci {
+  transform: scale(0);
+  transform-origin: left;
+}
+
+.sci img {
+  width: 60px;
+  height: 60px;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.6);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  visibility: hidden; /* hidden by default because it pops up with toggle */
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.banner.active .menu {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+/* separate styling for mobile */
+@media (max-width: 991px) {
+  header {
+    padding: 20px 40px;
+  }
+  .banner {
+    padding: 40px;
+    overflow: hidden;
+  }
+  /* top+left flag for mobile */
+  .banner:before {
+    top: 100px;
+    left: 0;
+    width: 170px;
+    height: 310px;
+  }
+  /* bottom+right flag for mobile */
+  .banner:after {
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 60px;
+  }
+  .content {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .content .contentBox {
+    max-width: 100%;
+  }
+  .content .imgBox img {
+    max-width: 100%;
+    min-width: 300px;
+  }
+  .content .contentBox h2 {
+    font-size: 2.5em;
+  }
+}
+
+/* .contentBox {
+  padding-right: 200px;
+} */
+
+.controller {
+  width: 70%;
+  height: 70%;
+  margin-right: 100px;
+  padding-top: 100px;
+}

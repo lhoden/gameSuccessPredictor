@@ -1,0 +1,28 @@
+<%= form_with(model: @game, local: true) do |f| %>
+
+<div style="color:white;font-size:18px;">
+<%= f.label "Genre:    " %>
+<%= f.select(:genre, options_for_select([['Sports','Sports'], ['RPG','RPG'], ['Platformer','Platformer'], ['Racing','Racing'], ['Action/Adventure','Action/Adventure'], ['Fighting','Fighting'], ['FPS','FPS'], ['Strategy','Strategy'], ['Misc','Misc']])) %>
+</div>
+
+<div>&nbsp;</div>
+
+<div style="color:white;font-size:18px;">
+<%= f.label "Platform: " %>
+<%= f.select(:platform, options_for_select([['PC','PC'], ['Nintendo','Nintendo'], ['Xbox','Xbox'], ['Playstation','Playstation']])) %>
+</div>
+
+<div>&nbsp;</div>
+
+<div style="color:white;font-size:18px;">
+<%= f.label "Developer: " %>
+<%= f.select(:developer, options_for_select([['Indie/Solo','Indie/Solo'], ['AAA 3rd-Party','AAA 3rd-Party'], ['AAA 1st-Party','AAA 1st-Party']])) %>
+</div>
+
+<div>&nbsp;</div>
+
+  <p style="text-align:center;">
+    <%= f.submit "Predict" %>
+  </p>
+
+<% end %>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Games Calculator', games_path %></li>
+    <li><%= link_to 'Data Set', about_path %></li>
+  </ul>
+
+<div style="background-color:#EBECF0;text-align:center;">
+<br/>
+<h1>Success Rate Prediction</h1>
+<p style="text-align:center;font-size:50px;color:#a95aec;font-weight:bold;">&nbsp;&nbsp;<%= @predict %></p>
+<p>This percentage is in reference to the historical popularity and sales for the combined parameters (<%= @game.genre %>, <%= @game.platform %>,
+  <%= @game.developer %>) compared to all other combinations of genre, platform, and development environments.</p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+
+</body>
+</html>

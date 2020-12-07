@@ -1,0 +1,32 @@
+<html>
+<head>
+<link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Games Calculator', games_path %></li>
+    <li><%= link_to 'Data Set', about_path %></li>
+  </ul>
+
+<div style="background-color:#7c5295;text-align:center;">
+<br/>
+<h1>Video Game Success Indicator</h1>
+<br/>
+<p style="color:white;">Choose any combination of video game genre, platform, or developer environment to obtain an estimate of success.
+This estimate is based on long-term sales and popularity for each category.</p>
+
+<br/>
+<br/>
+<%= render 'form_game' %>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+
+</body>
+</html>

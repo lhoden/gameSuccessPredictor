@@ -1,0 +1,159 @@
+<html>
+<head>
+<link href="../../assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section class="banner">
+    <header>
+      <a href="#" class="logo">G@m3r</a>
+      <div class="toggle" onclick="toggle();"></div>
+    </header>
+    <div class="content">
+      <div class="contentBox">
+        <h2>Let's play<br>some games</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="#">Load Game</a>
+      </div>
+      <div class="imgBox">
+        <img src="https://i.ibb.co/Jccf0QG/switch-pro-controller.png" class="controller">
+      </div>
+    </div>
+    <ul class="sci">
+      <li><a href="https://www.facebook.com"><img src="https://i.ibb.co/2FsMqZ0/facebook.png"></a></li>
+      <li><a href="https://www.instagram.com"><img src="https://i.ibb.co/g44mQQT/instagram.png"></a></li>
+      <li><a href="https://www.twitter.com"><img src="https://i.ibb.co/X49ZBzT/twitter.png"></a></li>
+    </ul>
+    <ul class="menu">
+      <li><%= link_to 'Home', root_path %></li>
+      <br/>
+      <li><%= link_to 'Games Calculator', games_path %></li>
+      <br/>
+      <li><%= link_to 'Genres', about_path %></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+    function toggle() {
+      const toggle = document.querySelector('.toggle'); /* named variable same as method, might not be wise tbh */
+      const banner = document.querySelector('.banner');
+      toggle.classList.toggle('active')
+      banner.classList.toggle('active')
+    }
+  </script>
+<!--
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Games Calculator', games_path %></li>
+    <li><%= link_to 'Data Set', about_path %></li>
+  </ul>
+
+<div style="background-color:#EBECF0;">
+<br/>
+<h1 style="text-align:center;">What is the video game success indicator?</h1>
+<br/>
+<p>While designing and implementing new game titles, many developers
+and game studios encounter the need to align their project to suit the needs of a
+particular target audience. Often times, before the fundamentals of the design and the
+implementation strategy can even be addressed, the developers seek to align the work
+prospect with a specified genre, and typically prioritize a platform according to their
+preferred context and in support of appealing to a target audience.</p>
+<p>A singular platform may be chosen initially, titles will also typically be ported to other platforms
+  after the studio reaches profit milestones. That being said, it can be extremely beneficial to
+  gauge the popularity and sales figures associated with particular platforms.</p>
+<p>This success indicator utilizes statistics surrounding video game genres, platforms,
+  and development environments to analyze and determine combinations that have seen
+  the greatest levels of success over time. Titles within these categories of combined
+  parameters are received with varying amounts of popularity and sales, and knowledge
+  of trends in data trends over time can aid developers in understanding the competitive
+  nature of the industry as well as eye-opening analysis of the market. The categories
+  with the highest percentages are greeted by the largest audience and number of sales,
+  according to data collected over the past two decades.</p>
+<p>Genre, platform, and development environment are some of the biggest factors considered
+  within the game development industry. While platform is more of a static variable in this
+  sense, developers have more flexibility relative to the genre and development environment
+  components. The following are expansions on well-known video game genres and studio layouts:
+</p>
+<br/>
+<div class="flex-parent">
+<div class="flex-child" style="padding-left:20px;">
+<h2 style="margin-left:40px;">Genres</h2>
+<h3 style="margin-left:40px;">Sports<h3>
+  <p>Video games within this genre typically simulate sports. This can include
+  traditional physical sports, games that incorporate principles of standard sports,
+  sports-based fighting (which can be confused with the fighting genre), competitive
+  sporting events, and even games which satirize sports in support of comedic themes.
+  Levels of realism in video games within the sports genre can vary. Many titles within
+  this genre incorporate championship structures to establish progress milestones.</p>
+<h3 style="margin-left:40px;">RPG<h3>
+  <p>Role-playing games often feature a protagonist who starts off as weak and
+  gradually makes progress or becomes stronger throughout the game. These games have
+very few boundaries and can be based within any setting imaginable. RPG's usually incorporate
+great amounts of customization, in order to provide players with their own personalized in-game
+experience.</p>
+<h3 style="margin-left:40px;">Platformer<h3>
+  <p>Platform games, also referred to as "jump n' run" games, are usually characterized
+  by navigation through multi-layered courses. Players must jump, run, avoid obstacles,
+and survive antagonists, while simultaneously attempting to reach the end of the level.
+Checkpoints are common in these games to prevent loss of progress points if the player falls
+off the stage or loses too many lives.</p>
+<h3 style="margin-left:40px;">Racing</h3>
+  <p>In racing games, the player finds themself behind the wheel. Settings might include
+  all kinds of tracks and vehicles. There are no real rules other than speeding through the course
+from start to finish while attempting to be the first to reach the finish line. Many games add obstacles
+or items that can be used to slow down other racers.</p>
+<h3 style="margin-left:40px;">Action/Adventure</h3>
+  <p>The Action-Adventure genre is incredibly inclusive, due to it being hybrid in nature.
+  Many argue that it is the broadest genre. One thing is for certain, though: any games
+including both components of action (whether it be between NPCs or other players) and adventure
+are a good fit for this genre.</p>
+<h3 style="margin-left:40px;">Fighting</h3>
+  <p>Traditional fighting games usually feature the main player facing off against
+  another player, or even an NPC (non-playable character). Over time, fighting games
+have grown to support multiple opponents simultaneously, creating exciting simulations
+that leverage the many shapes and forms of combat.</p>
+<h3 style="margin-left:40px;">FPS</h3>
+  <p>This genre is well known for its ability to create an adrenaline rush. FPS games
+  are fast-paced, competitive, and many times, allow the player to team up with additional
+players against common foes. In multiplayer FPS titles, teams of players will come together
+and face one another until there is only one player left standing.</p>
+<h3 style="margin-left:40px;">Strategy</h3>
+  <p>These titles capitalize on strategic elements in order to accomplish the primary objective.
+  Many well-known strategy games include building cities, civilizations, and even simulated businesses.
+Other strategy games are simulated versions of classic table-top board games, such as chess.</p>
+<h3 style="margin-left:40px;">Miscellaneous</h3>
+  <p>Games that do not fit in any of the other primary categories are included in this genre. These
+  games usually contain unique characteristics that set them apart. Objectives and progress points
+in these games can vary widely and look strikingly different from traditional titles. Sometimes, this uniqueness
+can provide these games with a competitive edge.</p>
+</div>
+<div class="flex-child">
+<h2>Development</h2>
+<h3>Indie/Solo</h3>
+  <p style="padding-right:30px;">Games created within an indie or solo development environment lack the resources and development talent
+  that is typically associated with larger game studios. Here "indie" refers to independent or solo game development,
+which refers to a development team which is small in size or only containing a singular individual. Although these
+development environments don't quite have the budgeting capabilities of larger game dev studios, titles produced within
+these contexts can be extremely competitive and in-depth.</p>
+<h3>AAA (First-Party)</h3>
+  <p style="padding-right:20px;">First-party triple-A games are made by large-development teams that work within companies supporting gaming platforms.
+  While some individuals within the company come together to create game consoles and supporting hardware, these development
+teams create the games that are offered under the company's title. These games typically have a competitive edge due to overwhelming
+support from players who favor the platform for which the games are offered. The primary weakness for these games, though, is that
+they are exclusive to the singular platform.</p>
+<h3>AAA (Third-Party)</h3>
+  <p style="padding-right:20px;">Third-party triple-A titles are also created by large development teams. These studios are equipped with a wide-range of resources
+  and typically involve strong developer and animation talent. While these studios do not typically have a native platform, they are often
+ported across consoles, and even offered to PC gamers in some instances. Third-party triple-A studios thrive off of the reputations they
+build for themselves throughout time.</p>
+</div>
+</div>
+
+<br/>
+<br/>
+
+</div>
+-->
+</body>
+</html>
